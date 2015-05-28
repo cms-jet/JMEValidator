@@ -1,0 +1,230 @@
+File structure
+==============
+
+This page document the ROOT file produced by the framework.
+
+Structure
+---------
+
+The framework is built around several *analyzers*. Each analyzer is responsible for the extraction of information of one particular high-level object (muons, vertex, photons, ...). These information are stored in plain ROOT format, using *TTrees*. The structure of this file is the following::
+
+    ├── [*] analyzer1
+    │       └── t
+    ├── [*] analyzer2
+    │       └── t
+    ├── [*] analyzer3
+    │       └── t
+    ├── [*] analyzer4
+    │       └── t
+    
+where [*] denotes a folder inside the file, and ``t`` is the tree associated with the analyzer. Each analyzer has its own folder inside the file. Inside this folder, a tree named ``t`` contains the products created by the analyzer.
+
+Trees structure
+---------------
+
+The tree structure share a common basis for all the analyzer. When relevant, this basis includes information about the impulsion of the object, its PDG id, as well as information about the matched generator particle.
+
+Unless stated otherwise, all branches are ``std::vector<>`` of the type stated in the branches list, containing multiple entries per event.
+
+Common branches
+_______________
+
+All the following branches are ``std::vector<>`` of the type stated in the list, containing multiple entries per event.
+
+.. c:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<double>> p4
+    
+    the impulsion of the object
+
+.. c:member:: float pt
+.. c:member:: float eta
+.. c:member:: float phi
+.. c:member:: float e
+
+    energy of the object
+
+.. c:member:: float m
+
+    mass of the object
+
+.. c:member:: float y
+
+    rapidity of the object
+
+.. c:member:: int charge
+
+.. c:member:: bool is_matched
+
+    If ``true``, a generator particle has been matched to this object. ``gen_*`` branches are filled for this object. If ``false``, no generator particle has been matched to this object, and ``gen_*`` branches are filled with default value for this object.
+
+.. c:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<double>> gen_p4
+    
+    the impulsion of the generator object matched to the object
+
+.. c:member:: float gen_pt
+.. c:member:: float gen_eta
+.. c:member:: float gen_phi
+.. c:member:: float gen_e
+.. c:member:: float gen_m
+.. c:member:: float gen_y
+.. c:member:: int gen_charge
+
+Analyzers and objects
+_____________________
+
+Run
+...
+
+This analyser extracts information about Run. The tree associated with this analyzer is filled only once **every run**, which usually means only **once** on MC samples.
+
+.. c:member:: ULong64_t run
+
+    The run number
+    
+.. c:member:: float cross_section
+
+    The cross-section associated to the sample
+
+Event
+.....
+
+General informations about the event.
+
+.. c:member:: ULong64_t run
+
+    Current run number
+
+.. c:member:: ULong64_t lumi
+
+    Current lumi section
+
+.. c:member:: ULong64_t evt
+
+    Current event number
+
+.. c:member:: float rho
+
+    ``rho``, extracted from ``fixedGridRhoFastjetAll``
+
+.. c:member:: std::vector<float> rhos
+
+    eta-dependant ``rho``. Binning is 5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5
+
+.. c:member:: ULong64_t npv
+
+    Number of primary vertices of the event, passing the following selection:
+
+    * ``!isFake()``
+    * ``ndof() >= 4``
+    * ``fabs(z()) <= 24``
+
+.. c:member:: std::vector<int> npus
+
+    Number of PU interactions for a given bunch crossing (``getPU_NumInteractions()``).
+
+    .. note::
+
+       Use :c:member:`bxns` to get the corresponding bunch crossing
+
+.. c:member:: std::vector<float> tnpus
+
+    Number of **true** PU interactions for a given bunch crossing (``getTrueNumInteractions()``)
+
+    .. note::
+
+       Use :c:member:`bxns` to get the corresponding bunch crossing
+
+.. c:member:: std::vector<int> bxns
+
+    Vector of IDs of the bunch crossing. Can contains one of the following value:
+
+    * ``-1``: previous bunch crossing
+    * ``0``: current bunch crossing
+    * ``1``: next bunch crossing
+
+    .. note::
+
+       For PU reweighting, you need to use the value of :c:member:`tnpus` corresponding to the bunch crossing with ID ``0``
+
+.. c:member:: std::vector<int> bunch_spacings
+
+    Spacing of the current bunch
+
+    .. note::
+
+       Use :c:member:`bxns` to get the corresponding bunch crossing
+
+.. c:member:: float weight
+
+    Generator weight
+
+.. c:member:: float pthat
+
+    Generator :math:`\hat{p}_T`
+
+.. c:member:: std::vector<float> pu_sumpt_lowpt
+.. c:member:: std::vector<float> pu_sumpt_highpt
+.. c:member:: std::vector<int> pu_ntrks_lowpt
+.. c:member:: std::vector<int> pu_ntrks_highpt
+.. c:member:: std::vector<std::vector<float>> pu_zpositions
+
+HLT
+.....
+
+General informations about the High Level Trigger. All the branches for this analyzer are stored inside ``std::vector<>`` of the corresping type listed below.
+
+.. c:member:: std::string paths
+
+    The list of all HLT paths accepted by the event.
+
+    .. note::
+
+       ALCA triggers are not stored
+
+.. c:member:: int prescales
+
+    The prescale of the HLT path
+
+    .. note::
+
+       Use :c:member:`paths` to get the corresponding HLT name
+
+
+.. c:member:: float objects_pt
+              float objects_eta
+              float objects_phi
+              float objects_e
+
+   Store impulsion of all HLT objects. For each object, you can find in :c:member:`objects_paths` which paths this object has triggered.
+
+.. c:member:: std::vector<int> objects_paths
+
+    For each HLT object, contains a list of all HLT paths triggered by this object.
+
+    .. note::
+
+       Only indexes are stored in this list for disk-space reasons. You can use theses indexes in the :c:member:`paths` list to retrieve the path name
+
+.. c:member:: std::vector<bool> objects_paths_isl3
+.. c:member:: std::vector<bool> objects_paths_islast
+
+Vertex
+______
+
+Store general quality information about primary vertices. All the branches for this analyzer are stored inside ``std::vector<>`` of the corresping type listed below.
+
+.. c:member:: float normalizedChi2
+
+    :math:`\chi^2 / \text{ndof}`
+
+.. c:member:: float ndof
+.. c:member:: float isValid
+.. c:member:: float isFake
+
+.. c:member:: ROOT::Math::SMatrix<double, 3, 3, ROOT::Math::MatRepSym<double, 3>> covariance
+
+    Use the diagonals of this 3x3 matrix to get the error on the position
+
+.. c:member:: ROOT::Math::PositionVector3D<ROOT::Math::Cartesian3D<double>> position
+
+    The position of the vertex
+
