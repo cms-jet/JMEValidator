@@ -3,7 +3,7 @@ Installation
 
 The current recommanded version for the framework is ``CMSSW 7.4.2 patch 1``. Setup recipe:
 
-.. code:: bash
+.. code-block:: bash
 
     export SCRAM_ARCH=slc6_amd64_gcc491
     cmsrel CMSSW_7_4_2_patch1

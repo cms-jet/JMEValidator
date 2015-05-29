@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
 
    installation
-   tree
+   structure
 
 Indices and tables
 ==================

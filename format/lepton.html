@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lepton &mdash; JME Framework 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="JME Framework 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="File structure" href="../structure.html"/>
+        <link rel="next" title="Electron" href="lepton/electron.html"/>
+        <link rel="prev" title="Jet" href="jet.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> JME Framework
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../structure.html">File structure</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html#structure">Structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../structure.html#trees-structure">Trees structure</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../structure.html#common-branches">Common branches</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../structure.html#analyzers-and-objects">Analyzers and objects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="event.html">Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hlt.html">HLT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jet.html">Jet</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Lepton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="met.html">MET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="photon.html">Photon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="puppi.html">Puppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="run.html">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex.html">Vertex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">JME Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../structure.html">File structure</a> &raquo;</li>
+      
+    <li>Lepton</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/format/lepton.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="lepton">
+<h1>Lepton<a class="headerlink" href="#lepton" title="Permalink to this headline">¶</a></h1>
+<p>Both electrons and muons share a common set of branches related to isolation computation. These branches are documented below, and specific branches are documented separately for <a class="reference internal" href="lepton/muon.html#muon"><span>Muon</span></a> and <a class="reference internal" href="lepton/electron.html#electron"><span>Electron</span></a>.</p>
+<div class="section" id="common-branches">
+<h2>Common branches<a class="headerlink" href="#common-branches" title="Permalink to this headline">¶</a></h2>
+<dl class="member">
+<dt id="_CPPv219chargedHadronIsoR03">
+<span id="chargedHadronIsoR03__float"></span>float <code class="descclassname"></code><code class="descname">chargedHadronIsoR03</code><a class="headerlink" href="#_CPPv219chargedHadronIsoR03" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv219chargedHadronIsoR04">
+<span id="chargedHadronIsoR04__float"></span>float <code class="descclassname"></code><code class="descname">chargedHadronIsoR04</code><a class="headerlink" href="#_CPPv219chargedHadronIsoR04" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isolation for charged hadrons in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>)</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv219neutralHadronIsoR03">
+<span id="neutralHadronIsoR03__float"></span>float <code class="descclassname"></code><code class="descname">neutralHadronIsoR03</code><a class="headerlink" href="#_CPPv219neutralHadronIsoR03" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv219neutralHadronIsoR04">
+<span id="neutralHadronIsoR04__float"></span>float <code class="descclassname"></code><code class="descname">neutralHadronIsoR04</code><a class="headerlink" href="#_CPPv219neutralHadronIsoR04" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isolation for neutral hadrons in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>)</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212photonIsoR03">
+<span id="photonIsoR03__float"></span>float <code class="descclassname"></code><code class="descname">photonIsoR03</code><a class="headerlink" href="#_CPPv212photonIsoR03" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv212photonIsoR04">
+<span id="photonIsoR04__float"></span>float <code class="descclassname"></code><code class="descname">photonIsoR04</code><a class="headerlink" href="#_CPPv212photonIsoR04" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isolation for photons in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>)</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv221puChargedHadronIsoR03">
+<span id="puChargedHadronIsoR03__float"></span>float <code class="descclassname"></code><code class="descname">puChargedHadronIsoR03</code><a class="headerlink" href="#_CPPv221puChargedHadronIsoR03" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv221puCHargedHadronIsoR04">
+<span id="puCHargedHadronIsoR04__float"></span>float <code class="descclassname"></code><code class="descname">puCHargedHadronIsoR04</code><a class="headerlink" href="#_CPPv221puCHargedHadronIsoR04" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isolation for PU charged hadrons in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>)</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214relativeIsoR03">
+<span id="relativeIsoR03__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR03</code><a class="headerlink" href="#_CPPv214relativeIsoR03" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv214relativeIsoR04">
+<span id="relativeIsoR04__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR04</code><a class="headerlink" href="#_CPPv214relativeIsoR04" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative isolation of the particle in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>)</p>
+<div class="math">
+\[\begin{split}I_\text{rel} &amp;= \frac{ I^\text{CH} + I^\text{NH} + I^\text{Ph} }{ p_T }\end{split}\]</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv224relativeIsoR03_deltaBeta">
+<span id="relativeIsoR03_deltaBeta__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR03_deltaBeta</code><a class="headerlink" href="#_CPPv224relativeIsoR03_deltaBeta" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv224relativeIsoR04_deltaBeta">
+<span id="relativeIsoR04_deltaBeta__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR04_deltaBeta</code><a class="headerlink" href="#_CPPv224relativeIsoR04_deltaBeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative isolation of the particle in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>), with <code class="docutils literal"><span class="pre">delta</span> <span class="pre">beta</span></code> correction</p>
+<div class="math">
+\[\begin{split}I_\text{rel} &amp;= \frac{ I^\text{CH} + \max{\left(I^\text{NH} + I^\text{Ph} - 0.5 I^\text{CH, PU}, 0 \right) } }{ p_T }\end{split}\]</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv221relativeIsoR03_withEA">
+<span id="relativeIsoR03_withEA__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR03_withEA</code><a class="headerlink" href="#_CPPv221relativeIsoR03_withEA" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv221relativeIsoR04_withEA">
+<span id="relativeIsoR04_withEA__float"></span>float <code class="descclassname"></code><code class="descname">relativeIsoR04_withEA</code><a class="headerlink" href="#_CPPv221relativeIsoR04_withEA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative isolation of the particle in various cone sizes (<span class="math">\(R = 0.3\)</span> or <span class="math">\(R = 0.4\)</span>), with <code class="docutils literal"><span class="pre">effective</span> <span class="pre">area</span></code> correction</p>
+<div class="math">
+\[\begin{split}I_\text{rel} &amp;= \frac{ I^\text{CH} + \max{\left(I^\text{NH} + I^\text{Ph} - \rho \times \text{EA}, 0 \right) } }{ p_T }\end{split}\]</div>
+<p>where <span class="math">\(EA\)</span> is the effective area. The values used are extracted on PHYS14 samples and summarised <a class="reference external" href="https://indico.cern.ch/event/367861/contribution/2/material/slides/0.pdf">on these slides</a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="specific-branches">
+<h2>Specific branches<a class="headerlink" href="#specific-branches" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lepton/electron.html">Electron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lepton/muon.html">Muon</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lepton/electron.html" class="btn btn-neutral float-right" title="Electron" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jet.html" class="btn btn-neutral" title="Jet" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Sébastien Brochet.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -31,6 +31,7 @@
 
   
     <link rel="top" title="JME Framework 1.0 documentation" href="index.html"/>
+        <link rel="next" title="File structure" href="structure.html"/>
         <link rel="prev" title="Welcome to JME Framework’s documentation!" href="index.html"/> 
 
   
@@ -72,6 +73,26 @@
           
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">File structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#structure">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#trees-structure">Trees structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#common-branches">Common branches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#analyzers-and-objects">Analyzers and objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="format/event.html">Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/hlt.html">HLT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/jet.html">Jet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/lepton.html">Lepton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/met.html">MET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/photon.html">Photon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/puppi.html">Puppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/run.html">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="format/vertex.html">Vertex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
           
@@ -112,27 +133,27 @@
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>The current recommanded version for the framework is <code class="docutils literal"><span class="pre">CMSSW</span> <span class="pre">7.4.2</span> <span class="pre">patch</span> <span class="pre">1</span></code>. Setup recipe:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>export SCRAM_ARCH=slc6_amd64_gcc491
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">SCRAM_ARCH</span><span class="o">=</span>slc6_amd64_gcc491
 cmsrel CMSSW_7_4_2_patch1
-cd CMSSW_7_4_2_patch1/src/
+<span class="nb">cd </span>CMSSW_7_4_2_patch1/src/
 cmsenv
 
 git cms-addpkg CommonTools/PileupAlgos
 
-# Puppi
+<span class="c"># Puppi</span>
 git cms-merge-topic nhanvtran:puppi-etadep-741
 
-# E/Gamma ID
+<span class="c"># E/Gamma ID</span>
 git cms-merge-topic ikrav:egm_id_74X_v0
 
-# Framework
+<span class="c"># Framework</span>
 git clone git@github.com:cms-jet/JetToolbox.git JMEAnalysis/JetToolbox -b jetToolbox_74X
 git clone git@github.com:blinkseb/TreeWrapper.git JMEAnalysis/TreeWrapper
 git clone git@github.com:blinkseb/JMEValidator.git JMEAnalysis/JMEValidator -b refactoring_74x_next
 
 scram b -j8
 
-cd JMEAnalysis/JMEValidator/test
+<span class="nb">cd </span>JMEAnalysis/JMEValidator/test
 cmsRun runFramework.py
 </pre></div>
 </div>
@@ -143,6 +164,8 @@ cmsRun runFramework.py
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structure.html" class="btn btn-neutral float-right" title="File structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Welcome to JME Framework’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -184,7 +207,7 @@ cmsRun runFramework.py
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
   
 

@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Jet &mdash; JME Framework 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="JME Framework 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="File structure" href="../structure.html"/>
+        <link rel="next" title="Lepton" href="lepton.html"/>
+        <link rel="prev" title="HLT" href="hlt.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> JME Framework
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../structure.html">File structure</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html#structure">Structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../structure.html#trees-structure">Trees structure</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../structure.html#common-branches">Common branches</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../structure.html#analyzers-and-objects">Analyzers and objects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="event.html">Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hlt.html">HLT</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Jet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lepton.html">Lepton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="met.html">MET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="photon.html">Photon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="puppi.html">Puppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="run.html">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex.html">Vertex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">JME Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../structure.html">File structure</a> &raquo;</li>
+      
+    <li>Jet</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/format/jet.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="jet">
+<h1>Jet<a class="headerlink" href="#jet" title="Permalink to this headline">¶</a></h1>
+<p>Store information about jets. The following selection is applied:</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math">\(p_T \geq 5\)</span> GeV</li>
+</ul>
+</div></blockquote>
+<p>All the branches for this analyzer are stored inside <code class="docutils literal"><span class="pre">std::vector&lt;&gt;</span></code> of the corresping type listed below.</p>
+<dl class="member">
+<dt id="_CPPv28refpdgid">
+<span id="refpdgid__i"></span>int <code class="descclassname"></code><code class="descname">refpdgid</code><a class="headerlink" href="#_CPPv28refpdgid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The PDG id of the gen jet associated to the jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27refdrjt">
+<span id="refdrjt__float"></span>float <code class="descclassname"></code><code class="descname">refdrjt</code><a class="headerlink" href="#_CPPv27refdrjt" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="math">\(\Delta R\)</span> between the jet and its gen jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27refarea">
+<span id="refarea__float"></span>float <code class="descclassname"></code><code class="descname">refarea</code><a class="headerlink" href="#_CPPv27refarea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jet area of the gen jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212partonFlavor">
+<span id="partonFlavor__int8_t"></span>int8_t <code class="descclassname"></code><code class="descname">partonFlavor</code><a class="headerlink" href="#_CPPv212partonFlavor" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv212hadronFlavor">
+<span id="hadronFlavor__int8_t"></span>int8_t <code class="descclassname"></code><code class="descname">hadronFlavor</code><a class="headerlink" href="#_CPPv212hadronFlavor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flavor of the jet. See <a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideBTagMCTools#Hadron_based_jet_flavour_definit">this twiki page</a> for a detailed explanation</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26jtarea">
+<span id="jtarea__float"></span>float <code class="descclassname"></code><code class="descname">jtarea</code><a class="headerlink" href="#_CPPv26jtarea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jet area of the get</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25jtjec">
+<span id="jtjec__float"></span>float <code class="descclassname"></code><code class="descname">jtjec</code><a class="headerlink" href="#_CPPv25jtjec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jet Energy Correction factor applied to this jet. Scale the impulsion of the jet with the inverse of this value to get the raw jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24beta">
+<span id="beta__float"></span>float <code class="descclassname"></code><code class="descname">beta</code><a class="headerlink" href="#_CPPv24beta" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv28betaStar">
+<span id="betaStar__float"></span>float <code class="descclassname"></code><code class="descname">betaStar</code><a class="headerlink" href="#_CPPv28betaStar" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv211betaClassic">
+<span id="betaClassic__float"></span>float <code class="descclassname"></code><code class="descname">betaClassic</code><a class="headerlink" href="#_CPPv211betaClassic" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv215betaStarClassic">
+<span id="betaStarClassic__float"></span>float <code class="descclassname"></code><code class="descname">betaStarClassic</code><a class="headerlink" href="#_CPPv215betaStarClassic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute <span class="math">\(\beta\)</span> and <span class="math">\(\beta^\star\)</span>, given by:</p>
+<div class="math">
+\[\begin{split}\beta &amp;= \frac{\sum{p_T^{\text{CH, PV}}}}{\sum{p_T^{\text{CH}}}} \\
+\beta^\star &amp;= \frac{\sum{p_T^{\text{CH, PU}}}}{\sum{p_T^{\text{CH}}}}\end{split}\]</div>
+<p>where the sum is over all the charged (<span class="math">\(\text{CH}\)</span>) constituents of the jet, <span class="math">\(\text{PV}\)</span> stands for constituents coming from the primary vertex and <span class="math">\(\text{PU}\)</span> for constituents coming from another vertex.</p>
+<p><code class="docutils literal"><span class="pre">Classic</span></code> values are computed using <code class="docutils literal"><span class="pre">MiniAOD</span></code> <code class="code docutils literal"><span class="pre">fromPV()</span></code> function (See <a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015#PV_Assignment">here</a> for more details):</p>
+<ul class="simple">
+<li><span class="math">\(\text{PV}\)</span> are constituents with <code class="code docutils literal"><span class="pre">fromPV()</span> <span class="pre">==</span> <span class="pre">3</span></code></li>
+<li><span class="math">\(\text{PU}\)</span> are constituents with <code class="code docutils literal"><span class="pre">fromPV()</span> <span class="pre">==</span> <span class="pre">0</span></code></li>
+</ul>
+<p>Other values are computed by iterating over all the vertices and finding which one the constituent comes from, requiring <code class="code docutils literal"><span class="pre">dZ()</span> <span class="pre">&lt;</span> <span class="pre">0.2</span></code>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv22dZ">
+<span id="dZ__float"></span>float <code class="descclassname"></code><code class="descname">dZ</code><a class="headerlink" href="#_CPPv22dZ" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal"><span class="pre">dZ</span></code> of the constituent with the biggest <span class="math">\(p_T\)</span></p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv210DRweighted">
+<span id="DRweighted__float"></span>float <code class="descclassname"></code><code class="descname">DRweighted</code><a class="headerlink" href="#_CPPv210DRweighted" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math">
+\[\begin{split}&amp;= \frac{\sum{p_T^2} \Delta R^2}{\sum{p_T^2}}\end{split}\]</div>
+<p>where the sum if over all the constituents of the jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26fRing0">
+<span id="fRing0__float"></span>float <code class="descclassname"></code><code class="descname">fRing0</code><a class="headerlink" href="#_CPPv26fRing0" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing1">
+<span id="fRing1__float"></span>float <code class="descclassname"></code><code class="descname">fRing1</code><a class="headerlink" href="#_CPPv26fRing1" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing2">
+<span id="fRing2__float"></span>float <code class="descclassname"></code><code class="descname">fRing2</code><a class="headerlink" href="#_CPPv26fRing2" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing3">
+<span id="fRing3__float"></span>float <code class="descclassname"></code><code class="descname">fRing3</code><a class="headerlink" href="#_CPPv26fRing3" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing4">
+<span id="fRing4__float"></span>float <code class="descclassname"></code><code class="descname">fRing4</code><a class="headerlink" href="#_CPPv26fRing4" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing5">
+<span id="fRing5__float"></span>float <code class="descclassname"></code><code class="descname">fRing5</code><a class="headerlink" href="#_CPPv26fRing5" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing6">
+<span id="fRing6__float"></span>float <code class="descclassname"></code><code class="descname">fRing6</code><a class="headerlink" href="#_CPPv26fRing6" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing7">
+<span id="fRing7__float"></span>float <code class="descclassname"></code><code class="descname">fRing7</code><a class="headerlink" href="#_CPPv26fRing7" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv26fRing8">
+<span id="fRing8__float"></span>float <code class="descclassname"></code><code class="descname">fRing8</code><a class="headerlink" href="#_CPPv26fRing8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fraction of transverse momentum of the jet in a annulus in <span class="math">\(\Delta R\)</span> plane between the jet and the constituents. The annulus is given by the number at the end of the branch name. For <code class="docutils literal"><span class="pre">fRing6</span></code>, it means <span class="math">\(0.6 &lt; \Delta R &lt; 0.7\)</span>, etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">fRing8</span></code> contains the fraction of transverse momentum for <span class="math">\(\Delta R \geq 0.8\)</span></p>
+</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv23nCh">
+<span id="nCh__uint16_t"></span>uint16_t <code class="descclassname"></code><code class="descname">nCh</code><a class="headerlink" href="#_CPPv23nCh" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv29nNeutrals">
+<span id="nNeutrals__uint16_t"></span>uint16_t <code class="descclassname"></code><code class="descname">nNeutrals</code><a class="headerlink" href="#_CPPv29nNeutrals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of charged and neutrals constituents of the jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv23ptD">
+<span id="ptD__float"></span>float <code class="descclassname"></code><code class="descname">ptD</code><a class="headerlink" href="#_CPPv23ptD" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math">
+\[\begin{split}&amp;= \frac{\sqrt{\sum{p_T^2}}}{\sum{p_T}}\end{split}\]</div>
+<p>where the sum if over all the constituents of the jet</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv224PUJetId_fullDiscriminant">
+<span id="PUJetId_fullDiscriminant__float"></span>float <code class="descclassname"></code><code class="descname">PUJetId_fullDiscriminant</code><a class="headerlink" href="#_CPPv224PUJetId_fullDiscriminant" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv218PUJetId_cutBasedId">
+<span id="PUJetId_cutBasedId__i"></span>int <code class="descclassname"></code><code class="descname">PUJetId_cutBasedId</code><a class="headerlink" href="#_CPPv218PUJetId_cutBasedId" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv214PUJetId_fullId">
+<span id="PUJetId_fullId__i"></span>int <code class="descclassname"></code><code class="descname">PUJetId_fullId</code><a class="headerlink" href="#_CPPv214PUJetId_fullId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store information about PU jet ID. See <a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMS/PileupJetID">this twiki page</a> for more detail.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv221QGTagger_qgLikelihood">
+<span id="QGTagger_qgLikelihood__float"></span>float <code class="descclassname"></code><code class="descname">QGTagger_qgLikelihood</code><a class="headerlink" href="#_CPPv221QGTagger_qgLikelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quark / Gluon tagger discriminant</p>
+</dd></dl>
+
+<div class="section" id="b-tagging">
+<h2>b-tagging<a class="headerlink" href="#b-tagging" title="Permalink to this headline">¶</a></h2>
+<p>Additionnaly, a set of branches are created dynamically, one for each b-tagging algorithm available. The name of these branches are by definition not known in advance because the available b-tagging algorithm may change. However, all these branches name ends with <code class="docutils literal"><span class="pre">BJetsTag</span></code> so they are easily identifiable.</p>
+<dl class="member">
+<dt id="_CPPv28BJetsTag">
+<span id="BJetsTag__floatP"></span>float *<code class="descclassname"></code><code class="descname">BJetsTag</code><a class="headerlink" href="#_CPPv28BJetsTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>b-tagging algorithm discriminant. The name of the branch is the actual name of the b-tagging algorithm.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lepton.html" class="btn btn-neutral float-right" title="Lepton" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hlt.html" class="btn btn-neutral" title="HLT" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Sébastien Brochet.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

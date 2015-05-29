@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Event &mdash; JME Framework 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="JME Framework 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="File structure" href="../structure.html"/>
+        <link rel="next" title="HLT" href="hlt.html"/>
+        <link rel="prev" title="File structure" href="../structure.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> JME Framework
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../structure.html">File structure</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html#structure">Structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../structure.html#trees-structure">Trees structure</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../structure.html#common-branches">Common branches</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../structure.html#analyzers-and-objects">Analyzers and objects</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hlt.html">HLT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jet.html">Jet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lepton.html">Lepton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="met.html">MET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="photon.html">Photon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="puppi.html">Puppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="run.html">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex.html">Vertex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">JME Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../structure.html">File structure</a> &raquo;</li>
+      
+    <li>Event</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/format/event.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="event">
+<h1>Event<a class="headerlink" href="#event" title="Permalink to this headline">¶</a></h1>
+<p>General informations about the event.</p>
+<dl class="member">
+<dt id="_CPPv23run">
+<span id="run__ULong64_t"></span>ULong64_t <code class="descclassname"></code><code class="descname">run</code><a class="headerlink" href="#_CPPv23run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current run number</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24lumi">
+<span id="lumi__ULong64_t"></span>ULong64_t <code class="descclassname"></code><code class="descname">lumi</code><a class="headerlink" href="#_CPPv24lumi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current lumi section</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv23evt">
+<span id="evt__ULong64_t"></span>ULong64_t <code class="descclassname"></code><code class="descname">evt</code><a class="headerlink" href="#_CPPv23evt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current event number</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv23rho">
+<span id="rho__float"></span>float <code class="descclassname"></code><code class="descname">rho</code><a class="headerlink" href="#_CPPv23rho" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal"><span class="pre">rho</span></code>, extracted from <code class="docutils literal"><span class="pre">fixedGridRhoFastjetAll</span></code></p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24rhos">
+<span id="rhos__std::vector:float:"></span>std::vector&lt;float&gt; <code class="descclassname"></code><code class="descname">rhos</code><a class="headerlink" href="#_CPPv24rhos" title="Permalink to this definition">¶</a></dt>
+<dd><p>eta-dependant <code class="docutils literal"><span class="pre">rho</span></code>. Binning is 5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv23npv">
+<span id="npv__ULong64_t"></span>ULong64_t <code class="descclassname"></code><code class="descname">npv</code><a class="headerlink" href="#_CPPv23npv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of primary vertices of the event, passing the following selection:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">!isFake()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ndof()</span> <span class="pre">&gt;=</span> <span class="pre">4</span></code></li>
+<li><code class="docutils literal"><span class="pre">fabs(z())</span> <span class="pre">&lt;=</span> <span class="pre">24</span></code></li>
+</ul>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24npus">
+<span id="npus__std::vector:i:"></span>std::vector&lt;int&gt; <code class="descclassname"></code><code class="descname">npus</code><a class="headerlink" href="#_CPPv24npus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of PU interactions for a given bunch crossing (<code class="docutils literal"><span class="pre">getPU_NumInteractions()</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use <code class="xref c c-member docutils literal"><span class="pre">bxns</span></code> to get the corresponding bunch crossing</p>
+</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25tnpus">
+<span id="tnpus__std::vector:float:"></span>std::vector&lt;float&gt; <code class="descclassname"></code><code class="descname">tnpus</code><a class="headerlink" href="#_CPPv25tnpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of <strong>true</strong> PU interactions for a given bunch crossing (<code class="docutils literal"><span class="pre">getTrueNumInteractions()</span></code>)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use <code class="xref c c-member docutils literal"><span class="pre">bxns</span></code> to get the corresponding bunch crossing</p>
+</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24bxns">
+<span id="bxns__std::vector:i:"></span>std::vector&lt;int&gt; <code class="descclassname"></code><code class="descname">bxns</code><a class="headerlink" href="#_CPPv24bxns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vector of IDs of the bunch crossing. Can contains one of the following value:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">-1</span></code>: previous bunch crossing</li>
+<li><code class="docutils literal"><span class="pre">0</span></code>: current bunch crossing</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>: next bunch crossing</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For PU reweighting, you need to use the value of <code class="xref c c-member docutils literal"><span class="pre">tnpus</span></code> corresponding to the bunch crossing with ID <code class="docutils literal"><span class="pre">0</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214bunch_spacings">
+<span id="bunch_spacings__std::vector:i:"></span>std::vector&lt;int&gt; <code class="descclassname"></code><code class="descname">bunch_spacings</code><a class="headerlink" href="#_CPPv214bunch_spacings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spacing of the current bunch</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use <code class="xref c c-member docutils literal"><span class="pre">bxns</span></code> to get the corresponding bunch crossing</p>
+</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26weight">
+<span id="weight__float"></span>float <code class="descclassname"></code><code class="descname">weight</code><a class="headerlink" href="#_CPPv26weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator weight</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25pthat">
+<span id="pthat__float"></span>float <code class="descclassname"></code><code class="descname">pthat</code><a class="headerlink" href="#_CPPv25pthat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator <span class="math">\(\hat{p}_T\)</span></p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214pu_sumpt_lowpt">
+<span id="pu_sumpt_lowpt__std::vector:float:"></span>std::vector&lt;float&gt; <code class="descclassname"></code><code class="descname">pu_sumpt_lowpt</code><a class="headerlink" href="#_CPPv214pu_sumpt_lowpt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv215pu_sumpt_highpt">
+<span id="pu_sumpt_highpt__std::vector:float:"></span>std::vector&lt;float&gt; <code class="descclassname"></code><code class="descname">pu_sumpt_highpt</code><a class="headerlink" href="#_CPPv215pu_sumpt_highpt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214pu_ntrks_lowpt">
+<span id="pu_ntrks_lowpt__std::vector:i:"></span>std::vector&lt;int&gt; <code class="descclassname"></code><code class="descname">pu_ntrks_lowpt</code><a class="headerlink" href="#_CPPv214pu_ntrks_lowpt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv215pu_ntrks_highpt">
+<span id="pu_ntrks_highpt__std::vector:i:"></span>std::vector&lt;int&gt; <code class="descclassname"></code><code class="descname">pu_ntrks_highpt</code><a class="headerlink" href="#_CPPv215pu_ntrks_highpt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv213pu_zpositions">
+<span id="pu_zpositions__std::vector:std::vector:float::"></span>std::vector&lt;std::vector&lt;float&gt;&gt; <code class="descclassname"></code><code class="descname">pu_zpositions</code><a class="headerlink" href="#_CPPv213pu_zpositions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="generator-information">
+<h2>Generator information<a class="headerlink" href="#generator-information" title="Permalink to this headline">¶</a></h2>
+<p>Information extracted from the <a class="reference external" href="https://cmssdt.cern.ch/SDT/doxygen/CMSSW_7_4_3_patch1/doc/html/d3/d77/classGenEventInfoProduct.html">GenEventInfoProduct</a> class.</p>
+<dl class="member">
+<dt id="_CPPv210nMEPartons">
+<span id="nMEPartons__i"></span>int <code class="descclassname"></code><code class="descname">nMEPartons</code><a class="headerlink" href="#_CPPv210nMEPartons" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv218nMEPartonsFiltered">
+<span id="nMEPartonsFiltered__i"></span>int <code class="descclassname"></code><code class="descname">nMEPartonsFiltered</code><a class="headerlink" href="#_CPPv218nMEPartonsFiltered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28alphaQCD">
+<span id="alphaQCD__float"></span>float <code class="descclassname"></code><code class="descname">alphaQCD</code><a class="headerlink" href="#_CPPv28alphaQCD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28alphaQED">
+<span id="alphaQED__float"></span>float <code class="descclassname"></code><code class="descname">alphaQED</code><a class="headerlink" href="#_CPPv28alphaQED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26qScale">
+<span id="qScale__float"></span>float <code class="descclassname"></code><code class="descname">qScale</code><a class="headerlink" href="#_CPPv26qScale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25pdfID">
+<span id="pdfID__std::pair:i.i:"></span>std::pair&lt;int, int&gt; <code class="descclassname"></code><code class="descname">pdfID</code><a class="headerlink" href="#_CPPv25pdfID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24pdfX">
+<span id="pdfX__std::pair:float.float:"></span>std::pair&lt;float, float&gt; <code class="descclassname"></code><code class="descname">pdfX</code><a class="headerlink" href="#_CPPv24pdfX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hlt.html" class="btn btn-neutral float-right" title="HLT" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../structure.html" class="btn btn-neutral" title="File structure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Sébastien Brochet.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
