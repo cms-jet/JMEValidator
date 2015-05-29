@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to JME Framework’s documentation! &mdash; JME Framework 1.0 documentation</title>
+  <title>IDs &mdash; JME Framework 1.0 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
 
   
-    <link rel="top" title="JME Framework 1.0 documentation" href="#"/>
-        <link rel="next" title="Installation" href="installation.html"/> 
+    <link rel="top" title="JME Framework 1.0 documentation" href="index.html"/>
+        <link rel="prev" title="Vertex" href="format/vertex.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -48,7 +48,7 @@
         
 
         
-          <a href="#" class="icon icon-home"> JME Framework
+          <a href="index.html" class="icon icon-home"> JME Framework
         
 
         
@@ -70,7 +70,7 @@
         
           
           
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">File structure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#structure">Structure</a></li>
@@ -92,7 +92,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ids.html">IDs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">IDs</a></li>
 </ul>
 
           
@@ -106,7 +106,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">JME Framework</a>
+        <a href="index.html">JME Framework</a>
       </nav>
 
 
@@ -115,13 +115,13 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
+    <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Welcome to JME Framework&#8217;s documentation!</li>
+    <li>IDs</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/ids.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -130,27 +130,34 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="welcome-to-jme-framework-s-documentation">
-<h1>Welcome to JME Framework&#8217;s documentation!<a class="headerlink" href="#welcome-to-jme-framework-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structure.html">File structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#structure">Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#trees-structure">Trees structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ids.html">IDs</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
-</ul>
+  <div class="section" id="ids">
+<span id="id1"></span><h1>IDs<a class="headerlink" href="#ids" title="Permalink to this headline">¶</a></h1>
+<p>Lepton and photon ID are computed using official selectors and stored inside a branch named <code class="docutils literal"><span class="pre">ids</span></code> of type <code class="code docutils literal"><span class="pre">std::vector&lt;std::map&lt;std::string,</span> <span class="pre">bool&gt;&gt;</span></code>. The <code class="docutils literal"><span class="pre">key</span></code> of the map is the name of official selector, and the <code class="docutils literal"><span class="pre">value</span></code> is <code class="docutils literal"><span class="pre">true</span></code> if the particle pass the id, or <code class="docutils literal"><span class="pre">false</span></code> otherwise.</p>
+<p>The IDs used are summarized in the table below:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">particle</th>
+<th class="head">link</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>photon</td>
+<td><a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedPhotonIdentificationRun2#Recipe_for_regular_users_for_74X">https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedPhotonIdentificationRun2#Recipe_for_regular_users_for_74X</a></td>
+</tr>
+<tr class="row-odd"><td>electron</td>
+<td><a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedElectronIdentificationRun2#Recipe_for_regular_users_for_74X">https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedElectronIdentificationRun2#Recipe_for_regular_users_for_74X</a></td>
+</tr>
+<tr class="row-even"><td>muon</td>
+<td>No official selector for the moment</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
 </div>
 
 
@@ -159,8 +166,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+        <a href="format/vertex.html" class="btn btn-neutral" title="Vertex" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

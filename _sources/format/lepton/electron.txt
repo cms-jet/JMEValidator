@@ -3,6 +3,8 @@
 Electron
 ########
 
+All the branches for this analyzer are stored inside ``std::vector<>`` of the corresping type listed below.
+
 .. cpp:member:: float supercluster_eta
                 float supercluster_phi
 
@@ -32,3 +34,7 @@ Electron
       p &= \frac{\text{electron.ecalEnergy()}}{\text{electron.eSuperClusterOverP()}}
 
 .. cpp:member:: bool pass_conversion_veto
+
+.. cpp:member:: std::map<std::string, bool> ids
+
+   See the :ref:`ids` page
