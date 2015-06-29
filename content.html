@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; JME Framework 1.0 documentation</title>
+  <title>File content &mdash; JME Framework 1.0 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="JME Framework 1.0 documentation" href="index.html"/>
-        <link rel="next" title="File structure" href="structure.html"/>
-        <link rel="prev" title="Welcome to JME Framework’s documentation!" href="index.html"/> 
+        <link rel="next" title="IDs" href="ids.html"/>
+        <link rel="prev" title="Vertex" href="format/vertex.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -72,7 +72,7 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">File structure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#structure">Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#trees-structure">Trees structure</a><ul>
@@ -93,6 +93,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">File content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ids.html">IDs</a></li>
 </ul>
 
@@ -118,11 +119,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Installation</li>
+    <li>File content</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/installation.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/content.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -131,30 +132,23 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>The current recommanded version for the framework is <code class="docutils literal"><span class="pre">CMSSW</span> <span class="pre">7.4.6</span> <span class="pre">patch</span> <span class="pre">2</span></code>. Setup recipe:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">SCRAM_ARCH</span><span class="o">=</span>slc6_amd64_gcc491
-cmsrel CMSSW_7_4_6_patch2
-<span class="nb">cd </span>CMSSW_7_4_6_patch2/src/
-cmsenv
-
-git cms-addpkg CommonTools/PileupAlgos
-
-<span class="c"># Puppi</span>
-git cms-merge-topic nhanvtran:puppi-etadep-741
-
-<span class="c"># Framework</span>
-git clone git@github.com:cms-jet/JetToolbox.git JMEAnalysis/JetToolbox -b jetToolbox_74X
-git clone git@github.com:blinkseb/TreeWrapper.git JMEAnalysis/TreeWrapper
-git clone git@github.com:cms-jet/JMEValidator.git JMEAnalysis/JMEValidator -b CMSSW_7_4_X
-
-scram b -j8
-
-<span class="nb">cd </span>JMEAnalysis/JMEValidator/test
-cmsRun runFrameworkMC.py
-</pre></div>
-</div>
+  <div class="section" id="file-content">
+<h1>File content<a class="headerlink" href="#file-content" title="Permalink to this headline">¶</a></h1>
+<p>The standard configuration of the framework runs all the available analyzers. The content of the file is the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">run</span></code>: produced by the <a class="reference internal" href="format/run.html#run"><span>Run</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">event</span></code>: produced by the <a class="reference internal" href="format/event.html#event"><span>Event</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">hlt</span></code>: produced by the <a class="reference internal" href="format/hlt.html#hlt"><span>HLT</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">vertex</span></code>: produced by the <a class="reference internal" href="format/vertex.html#vertex"><span>Vertex</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">muon</span></code>: produced by the <a class="reference internal" href="format/lepton/muon.html#muon"><span>Muon</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">electron</span></code>: produced by the <a class="reference internal" href="format/lepton/electron.html#electron"><span>Electron</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">photon</span></code>: produced by the <a class="reference internal" href="format/photon.html#photon"><span>Photon</span></a> analyzer</li>
+<li><code class="docutils literal"><span class="pre">met_chs</span></code>: produced by the <a class="reference internal" href="format/met.html#met"><span>MET</span></a> analyzer on MET produced with CHS (charged particle coming from a secondary vertex are not considered)</li>
+<li><code class="docutils literal"><span class="pre">met_puppi</span></code>: produced by the <a class="reference internal" href="format/met.html#met"><span>MET</span></a> analyzer on MET produced with the PUPPI algorithm</li>
+<li><code class="docutils literal"><span class="pre">AKXPF</span></code>, <code class="docutils literal"><span class="pre">AKXPFchs</span></code> and <code class="docutils literal"><span class="pre">AKXPFPUPPI</span></code>: produced by the <a class="reference internal" href="format/jet.html#jet"><span>Jet</span></a> analyzer on the jet collection with a cone radius <span class="math">\(R = 0.X\)</span>, respectively without PU mitigation method, Charged Hadrons Subtraction and PUPPI. By default, the framework produces jets collections with a cone radius of 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1.0.</li>
+</ul>
+</div></blockquote>
 </div>
 
 
@@ -163,10 +157,10 @@ cmsRun runFrameworkMC.py
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structure.html" class="btn btn-neutral float-right" title="File structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ids.html" class="btn btn-neutral float-right" title="IDs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to JME Framework’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="format/vertex.html" class="btn btn-neutral" title="Vertex" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

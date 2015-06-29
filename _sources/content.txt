@@ -1,0 +1,15 @@
+File content
+############
+
+The standard configuration of the framework runs all the available analyzers. The content of the file is the following:
+
+    * ``run``: produced by the :ref:`run` analyzer
+    * ``event``: produced by the :ref:`event` analyzer
+    * ``hlt``: produced by the :ref:`hlt` analyzer
+    * ``vertex``: produced by the :ref:`vertex` analyzer
+    * ``muon``: produced by the :ref:`muon` analyzer
+    * ``electron``: produced by the :ref:`electron` analyzer
+    * ``photon``: produced by the :ref:`photon` analyzer
+    * ``met_chs``: produced by the :ref:`met` analyzer on MET produced with CHS (charged particle coming from a secondary vertex are not considered)
+    * ``met_puppi``: produced by the :ref:`met` analyzer on MET produced with the PUPPI algorithm
+    * ``AKXPF``, ``AKXPFchs`` and ``AKXPFPUPPI``: produced by the :ref:`jet` analyzer on the jet collection with a cone radius :math:`R = 0.X`, respectively without PU mitigation method, Charged Hadrons Subtraction and PUPPI. By default, the framework produces jets collections with a cone radius of 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1.0.
