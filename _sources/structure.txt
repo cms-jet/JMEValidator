@@ -31,7 +31,7 @@ _______________
 
 All the following branches are ``std::vector<>`` of the type stated in the list, containing multiple entries per event.
 
-.. cpp:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<double>> p4
+.. cpp:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<float>> p4
     
     the impulsion of the object
 
@@ -45,7 +45,7 @@ All the following branches are ``std::vector<>`` of the type stated in the list,
 
     If ``true``, a generator particle has been matched to this object. ``gen_*`` branches are filled for this object. If ``false``, no generator particle has been matched to this object, and ``gen_*`` branches are filled with default value for this object.
 
-.. cpp:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<double>> gen_p4
+.. cpp:member:: ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<float>> gen_p4
     
     the impulsion of the generator object matched to the object
 
