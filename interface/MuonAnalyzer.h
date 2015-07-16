@@ -73,6 +73,9 @@ class MuonAnalyzer: public JME::LeptonAnalyzer {
         std::vector<bool>& isTight_ = tree["isTight"].write<std::vector<bool>>();
         std::vector<bool>& isHighPt_ = tree["isHighPt"].write<std::vector<bool>>();
 
+        std::vector<bool>& isTruthMatch_PromptMuon_ = tree["isTruthMatch_PromptMuon"].write<std::vector<bool>>();
+        std::vector<bool>& isTruthMatch_NonTauPromptMuon_ = tree["isTruthMatch_NonTauPromptMuon"].write<std::vector<bool>>();
+
         std::vector<std::map<std::string, bool>>& ids_ = tree["ids"].write<std::vector<std::map<std::string, bool>>>();
 
         std::vector<float>& neutralHadronIsoR04_pfWeighted_ = tree["neutralHadronIsoR04_pfWeighted"].write<std::vector<float>>();
