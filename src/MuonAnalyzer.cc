@@ -79,6 +79,27 @@ void MuonAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
         extractBasicProperties(muon);
         extractGenProperties(muon.genLepton());
 
+	{
+	  const long PDGID_MUON = 13 ;
+	  const reco::GenParticle * truth_mu = muon.genLepton();
+	  
+	  const bool b_matched_to_prompt_muon =
+	    ( truth_mu != 0 )
+	    &&
+	    abs( truth_mu -> pdgId())== PDGID_MUON // just a sanity check.
+	    &&
+	    truth_mu  -> isPromptFinalState() ;
+	  
+	  const bool b_matched_to_nonTauprompt_muon =
+	    b_matched_to_prompt_muon
+	    &&
+	    ( ! ( truth_mu -> isDirectPromptTauDecayProductFinalState() ) ) ; 
+	  
+	  isTruthMatch_PromptMuon_       . push_back ( b_matched_to_prompt_muon );
+	  isTruthMatch_NonTauPromptMuon_ . push_back ( b_matched_to_nonTauprompt_muon );
+	}
+
+
         reco::MuonPFIsolation pfIso = muon.pfIsolationR03();
         computeRelativeIsolationR03(muon, pfIso.sumChargedHadronPt, pfIso.sumNeutralHadronEt, pfIso.sumPhotonEt, pfIso.sumPUPt, muon.eta(), rho);
 
