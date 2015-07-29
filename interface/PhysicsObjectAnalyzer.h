@@ -58,11 +58,11 @@ namespace JME {
         protected:
             std::vector<PtEtaPhiEVector>& p4 = tree["p4"].write<std::vector<PtEtaPhiEVector>>();
             std::vector<float>& y = tree["y"].write<std::vector<float>>();
-            std::vector<int8_t>& charge = tree["charge"].write<std::vector<int8_t>>();
+            std::vector<float>& charge = tree["charge"].write<std::vector<float>>();
 
             std::vector<bool>& is_matched = tree["has_gen_particle"].write<std::vector<bool>>();
             std::vector<PtEtaPhiEVector>& gen_p4 = tree["gen_p4"].write<std::vector<PtEtaPhiEVector>>();
             std::vector<float>& gen_y = tree["gen_y"].write<std::vector<float>>();
-            std::vector<int8_t>& gen_charge = tree["gen_charge"].write<std::vector<int8_t>>();
+            std::vector<float>& gen_charge = tree["gen_charge"].write<std::vector<float>>();
     };
 }

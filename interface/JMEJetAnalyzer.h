@@ -51,6 +51,7 @@ class JMEJetAnalyzer : public JME::PhysicsObjectAnalyzer
         std::vector<float>& betaClassic = tree["betaClassic"].write<std::vector<float>>();
         std::vector<float>& betaStarClassic = tree["betaStarClassic"].write<std::vector<float>>();
         std::vector<float>& dZ = tree["dZ"].write<std::vector<float>>();
+        std::vector<float>& d0 = tree["d0"].write<std::vector<float>>();
         std::vector<float>& DRweighted = tree["DRweighted"].write<std::vector<float>>();
         std::vector<float>& fRing0 = tree["fRing0"].write<std::vector<float>>();
         std::vector<float>& fRing1 = tree["fRing1"].write<std::vector<float>>();

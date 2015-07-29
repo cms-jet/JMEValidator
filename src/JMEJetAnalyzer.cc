@@ -294,7 +294,7 @@ void JMEJetAnalyzer::computeBetaStar(const pat::Jet& jet, const std::vector<reco
     int nCh_tmp(0), nNeutrals_tmp(0);
     float sumTkPt(0.0);
     float beta_tmp(0.0), betaStar_tmp(0.0), betaStarClassic_tmp(0.0), betaClassic_tmp(0.0);
-    float pTMax(0.0), pTMaxChg(0.0),pTMaxNeutral(0.0), dZ2(-999);
+    float pTMax(0.0), pTMaxChg(0.0),pTMaxNeutral(0.0), dZ2(-999),d02(-999);
     float sumW(0.0), sumW2(0.0), sumWdR2(0.0);
     float sum_deta(0.0),sum_dphi(0.0),sum_deta2(0.0),sum_dphi2(0.0),sum_detadphi(0.0),Teta(0.0),Tphi(0.0);
     float ave_deta(0.0), ave_dphi(0.0);
@@ -351,6 +351,7 @@ void JMEJetAnalyzer::computeBetaStar(const pat::Jet& jet, const std::vector<reco
                 if (lPack->pt() > pTMaxChg) {
                     pTMaxChg = lPack->pt();
                     dZ2 = lPack->dz();
+                    d02 = lPack->dxy();
                 }
 
                 float tkpt = lPack->pt();
@@ -454,6 +455,7 @@ void JMEJetAnalyzer::computeBetaStar(const pat::Jet& jet, const std::vector<reco
     }
 
     dZ.push_back(dZ2);
+    d0.push_back(d02);
     nCh.push_back(nCh_tmp);
     nNeutrals.push_back(nNeutrals_tmp);
     axisMajor.push_back(axis1);
