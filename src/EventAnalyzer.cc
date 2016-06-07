@@ -4,7 +4,7 @@
 EventAnalyzer::EventAnalyzer(const edm::ParameterSet& iConfig): JME::Analyzer(iConfig),
     rhoToken_        (consumes<double>(iConfig.getParameter<edm::InputTag>("rho"))),
     rhosToken_       (consumes<std::vector<double>>(iConfig.getParameter<edm::InputTag>("rhos"))),
-    puInfoToken_     (consumes<std::vector<PileupSummaryInfo>>(edm::InputTag("addPileupInfo"))),
+    puInfoToken_     (consumes<std::vector<PileupSummaryInfo>>(edm::InputTag("slimmedAddPileupInfo"))),
     genInfoToken_    (consumes<GenEventInfoProduct>(edm::InputTag("generator"))),
     verticesToken_   (consumes<std::vector<reco::Vertex>>(iConfig.getParameter<edm::InputTag>("vertices")))
 {
