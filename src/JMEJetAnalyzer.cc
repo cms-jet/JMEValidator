@@ -159,7 +159,7 @@ void JMEJetAnalyzer::analyze(const edm::Event& iEvent,
 
      // New jet flavor informations
      // See https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideBTagMCTools
-     partonFlavor.push_back(jet.partonFlavour());
+     partonFlavor.push_back(jet.genParton() ? jet.genParton()->pdgId() : 0);
      hadronFlavor.push_back(jet.hadronFlavour());
 
      // b-tagging discriminators
@@ -451,15 +451,15 @@ void JMEJetAnalyzer::computeBetaStar(const pat::Jet& jet, const std::vector<reco
 
     if (sumW > 0) {
         DRweighted.push_back(sumWdR2 / sumW2);
-        fRing0.push_back(sum_rings[0] / sumW);
-        fRing1.push_back(sum_rings[1] / sumW);
-        fRing2.push_back(sum_rings[2] / sumW);
-        fRing3.push_back(sum_rings[3] / sumW);
-        fRing4.push_back(sum_rings[4] / sumW);
-        fRing5.push_back(sum_rings[5] / sumW);
-        fRing6.push_back(sum_rings[6] / sumW);
-        fRing7.push_back(sum_rings[7] / sumW);
-        fRing8.push_back(sum_rings[8] / sumW);
+        fRing0.push_back(sum_rings[0] / jet.correctedJet(0).pt());
+        fRing1.push_back(sum_rings[1] / jet.correctedJet(0).pt());
+        fRing2.push_back(sum_rings[2] / jet.correctedJet(0).pt());
+        fRing3.push_back(sum_rings[3] / jet.correctedJet(0).pt());
+        fRing4.push_back(sum_rings[4] / jet.correctedJet(0).pt());
+        fRing5.push_back(sum_rings[5] / jet.correctedJet(0).pt());
+        fRing6.push_back(sum_rings[6] / jet.correctedJet(0).pt());
+        fRing7.push_back(sum_rings[7] / jet.correctedJet(0).pt());
+        fRing8.push_back(sum_rings[8] / jet.correctedJet(0).pt());
         ptD.push_back(sqrt(sumW2) / sumW);
         jetRneutral.push_back(pTMaxNeutral/sumW);
         jetRchg.push_back(pTMaxChg/sumW);
