@@ -159,7 +159,7 @@ void JMEJetAnalyzer::analyze(const edm::Event& iEvent,
 
      // New jet flavor informations
      // See https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideBTagMCTools
-     partonFlavor.push_back(jet.partonFlavour());
+     partonFlavor.push_back(jet.genParton() ? jet.genParton()->pdgId() : 0);
      hadronFlavor.push_back(jet.hadronFlavour());
 
      // b-tagging discriminators
